@@ -1,1 +1,16 @@
 body{background-color: burlywood;}
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.sidebar{
+    float: right;
+    width: 10%;
+    background-color: lightblue;
+    align-content: center;
+    text-align: center;
+}
+.sidebarcontent{
+    width: default;
+}
