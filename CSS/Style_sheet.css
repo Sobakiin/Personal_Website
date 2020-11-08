@@ -11,6 +11,6 @@ h1{
     align-content: center;
     text-align: center;
 }
-.sidebarcontent{
-    width: default;
+.mainthing{
+    float: left;
 }
