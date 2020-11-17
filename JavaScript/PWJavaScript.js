@@ -1,0 +1,1 @@
+const courseList = [{code:"ACIT 1620",name:"Fudamental Web Technologies"}, {code:"MATH 1310", name:"Technical Math for IT"},{code:"COMM1116", name:"Business Communications"}]
