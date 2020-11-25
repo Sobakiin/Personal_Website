@@ -33,16 +33,42 @@ function findCourse(courseList){
         let in_code = prompt("That is not a valid input, please enter a 4-digit course code:", "0000")
     }
 
-var exist_check = 0; 
-for ( i = 0; i<=courseList.length; i++){
-    if (courseList[i].code.includes(in_code)){
-        exist_check++;
+    var exist_check = 0; 
+    for ( let i of courseList){
+        if (i.code.includes(in_code)){
+            exist_check++;
 
-        for(let item of document.querySelectorAll(".grid-item1")){
-            if(item.textContent.includes(in_code)) {item.style.backgroundcColor = "green"}
-        }
-        
-    };
-}
+            for(let item of document.querySelectorAll(".grid-item1")){
+                if(item.textContent.includes(in_code)){item.style.backgroundColor = "green"}
+            }
+            
+        };
+    }
+    if(exist_check == 0){
+        let ob_class= document.querySelector(".course-box")
+        let new_course = document.createElement("DIV");
 
+        let class_code = document.createElement("A")
+
+        class_code.classList.add(".grid-item1")
+        class_code.appendChild(document.createTextNode(in_code))
+
+        let course_desc = document.createElement("P")
+        course_desc.classList.add(".grid-item2")
+        course_desc.appendChild(document.createTextNode("N/A"))
+
+        let course_date = document.createElement("P")
+        course_date.classList.add(".grid-item3")
+        course_date.appendChild(document.createTextNode("Fall 2020"))
+
+
+        new_course.appendChild(class_code);
+        new_course.appendChild(course_desc);
+        new_course.appendChild(course_date);
+
+
+        ob_class.appendChild(new_course);
+
+    }
 }
+findCourse(courses_array)
